@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'OpenSans Light';
+  src: url("../fonts/opensans-light_0-webfont.woff2") format("woff2"), url("../fonts/opensans-light_0-webfont.woff") format("woff");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('https://fonts.googleapis.com/css?family=Roboto');
+  font-weight: lighter;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "OpenSans Light", sans-serif;
+}
+
+.main {
+  max-width: 966px;
+  margin: 0 auto;
+}
+.hello-world {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+.header {
+  display: flex;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  position: relative;
+  cursor: pointer;
+  font-weight: lighter;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -2.4px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: 0.3s;
+}
+.title:hover {
+  color: rgba(44,83,158,1);
+  transition: 1s;
+}
+.title::before {
+  content: "";
+  position: absolute;
+  background: url('../images/hello-world.svg') no-repeat 0 0;
+  width: 400px;
+  height: 400px;
+  left: -50px;
+  bottom: -30px;
+}
+.footer {
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-family: "Poboto", cursive ;
+  color: black;
+  transition: 0.3s;
+}
+a {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  outline: 0;
+  box-shadow: 0;
+}
+.footer:hover, a svg:hover {
+  color: #fff;
+  fill: #fff;
+  transition: 0.5s;
+}
+.footer__img {
+  width: 18px;
+  height: 18px;
+  margin-right: 2px;
+}
+
+@media (max-width: 1023px) {
+  .main {
+    max-width: 768px;
+  }
+  .hello-world {
+    margin: 0 40px;
+  }
+}
+@media (max-width: 767px) {
+  .main {
+    max-width: 475px;
+  }
+}
+@media (max-width: 474px) {
+  .main {
+    max-width: 320px;
+  }
+  .hello-world {
+    align-items: center;
+    margin: 0;
+  }
+  .title {
+    font-size: 28px;
+  }
+  .title::before {
+    width: 300px;
+    height: 300px;
+    left: -70px;
+  }
+}
