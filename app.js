@@ -11,7 +11,7 @@ app.use(favicon(__dirname + '/public/favicon.ico'));
 
 app.get('/', index.index);
 
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 3000;
 
 app.listen(port, function () {
   console.log('Server is Up!');
